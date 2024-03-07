@@ -129,7 +129,7 @@ router.post('/send-email', async (req, res) => {
         // Email options
         let mailOptions = {
             from: 'kunalborkar3088@gmail.com', // sender address
-            to: "kunalborkar2001@gmail.com", // list of receivers
+            to: "info@redpositive.in", // list of receivers
             subject: "Data", 
             text: emailBody
         };
