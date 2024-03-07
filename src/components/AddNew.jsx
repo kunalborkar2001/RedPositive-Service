@@ -28,7 +28,7 @@ export default function AddNew() {
         e.preventDefault();
         if (addData.name.length > 0) {
 
-            axios.post('http://localhost:8082/api/data', addData)
+            axios.post('https://aggressive-tick-sarong.cyclic.app/api/data', addData)
                 .then(response => {
                     console.log('Response:', response.data);
                 })
