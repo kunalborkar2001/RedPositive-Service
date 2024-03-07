@@ -163,7 +163,7 @@ export function TableDemo() {
                                     }
                                     {data._id === selectedItemId ?
                                         <Button onClick={() => setSelectedItemId(null)}>Cancel</Button> :
-                                        <Button onClick={() => handleDelete(data._id)} variant="destructive">Delete</Button>
+                                        <Button onClick={() => handleDelete(data._id)} variant="destructive" disabled >Delete</Button>
                                     }
                                 </TableCell>
                             </TableRow>
