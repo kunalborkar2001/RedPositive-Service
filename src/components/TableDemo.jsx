@@ -26,7 +26,7 @@ export function TableDemo() {
 
     //Data Fetching 
     let dataFetch = async () => {
-        const response = await axios.get("http://localhost:8082/api/data");
+        const response = await axios.get("https://aggressive-tick-sarong.cyclic.app/api/data");
         let data = await response.data
         setTableData(data)
     }
@@ -62,7 +62,7 @@ export function TableDemo() {
         setSelectedItemId(null);
 
         // Asynchronously delete the item from the server
-        axios.delete(`http://localhost:8082/api/data/${id}`)
+        axios.delete(`https://aggressive-tick-sarong.cyclic.app/api/data/${id}`)
             .then(() => {
                 console.log("Item deleted successfully");
             })
@@ -87,7 +87,7 @@ export function TableDemo() {
         if (selectedData.length) {
             //Make Email API call
             try {
-                const response = await axios.post('http://localhost:8082/api/data/send-email', {
+                const response = await axios.post('https://aggressive-tick-sarong.cyclic.app/api/data/send-email', {
                     text: JSON.stringify(selectedData) // Convert selectedData to string
                 });
                 console.log(response.data);
@@ -111,7 +111,7 @@ export function TableDemo() {
             }
 
             // Update the item with the changes made
-            const response = await axios.put(`http://localhost:8082/api/data/${id}`, updatedData);
+            const response = await axios.put(`https://aggressive-tick-sarong.cyclic.app/api/data/${id}`, updatedData);
             const newData = response.data;
 
             // Update the tableData state with the updated item
