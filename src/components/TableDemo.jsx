@@ -88,7 +88,7 @@ export function TableDemo() {
             //Make Email API call
             try {
                 const response = await axios.post('https://aggressive-tick-sarong.cyclic.app/api/data/send-email', {
-                    text: JSON.stringify(selectedData) // Convert selectedData to string
+                    text: JSON.stringify(selectedData) 
                 });
                 console.log(response.data);
                 alert('Email sent successfully');
