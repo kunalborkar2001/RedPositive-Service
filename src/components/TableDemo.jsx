@@ -103,7 +103,7 @@ export function TableDemo() {
 
 
     const handleUpdatedData = async (id) => {
-        console.log(id)
+        // console.log(id)
         try {
             // Make sure updatedData is not null
             if (!updatedData) {

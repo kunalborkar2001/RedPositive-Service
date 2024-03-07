@@ -12,7 +12,7 @@ export default function AddNew() {
         email: "",
         hobbies: ""
     });
-    console.log(addData);
+    // console.log(addData);
 
     const onChange = (e) => {
         const { name, value } = e.target;

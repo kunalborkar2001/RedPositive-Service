@@ -4,6 +4,7 @@ const router = express.Router();
 const User = require('../models/User');
 const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 // Create a new user
 router.post('/', async (req, res) => {
@@ -121,7 +122,7 @@ router.post('/send-email', async (req, res) => {
             service: 'gmail',
             auth: {
                 user: 'kunalborkar3088@gmail.com', 
-                pass: 'ibhhlfkuhalnyfzi'
+                pass: process.env.PASSWORD
             }
         });
 
